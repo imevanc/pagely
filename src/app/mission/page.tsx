@@ -1,7 +1,5 @@
-import type { NextPage } from "next/types";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import type {NextPage} from "next/types";
+import {ArrowRightIcon} from "@heroicons/react/24/outline";
 
 const values = [
   {

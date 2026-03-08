@@ -1,6 +1,6 @@
-import type { ElementType } from "react";
-import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import type {ElementType} from "react";
+import {FaInstagram, FaLinkedin, FaTiktok} from "react-icons/fa";
+import {FaXTwitter} from "react-icons/fa6";
 import {PagelyLogo} from "./PagelyLogo";
 
 const socialLinks = [
@@ -21,7 +21,7 @@ const footerLinks = [
 ];
 
 export const SiteFooter = () =>
-    <footer className="border-t border-white/10 bg-slate-950/40">
+    <footer className="border-t border-white/10 bg-purple-950/95">
       <div className="mx-auto grid w-full max-w-7xl gap-10 px-6 py-10 lg:grid-cols-2 lg:px-8">
         <div>
           <PagelyLogo />

@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {useState} from "react";
+import {Dialog, DialogPanel} from "@headlessui/react";
+import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 import {PagelyLogo} from "./PagelyLogo";
 
 const links = [
@@ -15,7 +15,7 @@ export const SiteHeader = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/50 backdrop-blur">
+    <div className="sticky top-0 z-50 border-b border-white/10 bg-blue-950/95 backdrop-blur">
       <nav
         className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4 lg:px-8"
         aria-label="Global"
@@ -88,6 +88,6 @@ export const SiteHeader = () => {
           </div>
         </DialogPanel>
       </Dialog>
-    </header>
+    </div>
   );
 };

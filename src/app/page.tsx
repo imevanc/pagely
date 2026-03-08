@@ -1,16 +1,10 @@
 "use client";
 
-import type { NextPage } from "next/types";
-import { ArrowRightIcon, CheckCircleIcon, StarIcon } from "@heroicons/react/24/outline";
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaTiktok,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { SiGooglecalendar, SiPaypal, SiStripe } from "react-icons/si";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import type {NextPage} from "next/types";
+import {ArrowRightIcon, CheckCircleIcon, StarIcon} from "@heroicons/react/24/outline";
+import {FaInstagram, FaLinkedin, FaTiktok,} from "react-icons/fa";
+import {FaXTwitter} from "react-icons/fa6";
+import {SiGooglecalendar, SiPaypal, SiStripe} from "react-icons/si";
 
 const creatorDetails = [
   "Custom bio and brand colors",
@@ -32,11 +26,8 @@ const integrations = [
   { name: "Stripe", icon: SiStripe, color: "text-purple-400" },
 ];
 
-const Home: NextPage = () => {
-  return (
+const Home: NextPage = () =>
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
-      <SiteHeader />
-
       <main>
         {/* Hero */}
         <section className="mx-auto max-w-7xl px-6 py-14 text-center lg:px-8 lg:py-20">
@@ -193,11 +184,6 @@ const Home: NextPage = () => {
           </div>
         </section>
       </main>
-
-      <SiteFooter />
     </div>
-  );
-};
 
 export default Home;
-

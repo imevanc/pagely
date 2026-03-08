@@ -1,6 +1,4 @@
-import type { NextPage } from "next/types";
-import SiteHeader from "@/components/SiteHeader";
-import SiteFooter from "@/components/SiteFooter";
+import type {NextPage} from "next/types";
 
 const BlogPage: NextPage = () => {
   return (
