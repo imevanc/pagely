@@ -35,7 +35,7 @@ export const SiteHeader = () => {
             </a>
           ))}
           <a
-            href="#"
+            href="/register"
             className="rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-blue-400 hover:to-purple-500"
           >
             Get Started
@@ -79,7 +79,7 @@ export const SiteHeader = () => {
               </a>
             ))}
             <a
-              href="#"
+              href="/register"
               onClick={() => setOpen(false)}
               className="mt-2 block rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-3 py-2 text-center text-base font-semibold text-white"
             >
