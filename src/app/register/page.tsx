@@ -1,6 +1,7 @@
 "use client";
 
 import {useMemo, useRef, useState} from "react";
+import {useRouter} from "next/navigation";
 import type {NextPage} from "next/types";
 import {useForm} from "react-hook-form";
 import {EyeIcon, EyeSlashIcon} from "@heroicons/react/24/outline";
@@ -15,6 +16,7 @@ type RegisterFormValues = {
 };
 
 const RegisterPage: NextPage = () => {
+  const router = useRouter();
   const [countryCode, setCountryCode] = useState<string>("+44");
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -33,11 +35,25 @@ const RegisterPage: NextPage = () => {
 
   const onSubmit = (data: RegisterFormValues) => {
     console.log({...data, countryCode});
+    router.push("/subscribe");
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-20 lg:px-8">
+        {/* Stepper */}
+        <div className="mb-10 flex items-center justify-center gap-3">
+          <div className="flex items-center gap-2">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-bold text-white">1</div>
+            <span className="text-sm font-semibold text-white">Account</span>
+          </div>
+          <div className="h-px w-10 bg-white/20" />
+          <div className="flex items-center gap-2">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">2</div>
+            <span className="text-sm text-purple-300">Plan</span>
+          </div>
+        </div>
+
         <h1 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Hey @{headingUsername} 👋<br />Let&apos;s monetise your following!
         </h1>
