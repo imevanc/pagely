@@ -37,8 +37,15 @@ const SubscribePage: NextPage = () => {
           </div>
           <div className="h-px w-10 bg-white/20" />
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-bold text-white">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
               2
+            </div>
+            <span className="text-sm text-purple-300">Socials</span>
+          </div>
+          <div className="h-px w-10 bg-white/20" />
+          <div className="flex items-center gap-2">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-bold text-white">
+              3
             </div>
             <span className="text-sm font-semibold text-white">Plan</span>
           </div>
