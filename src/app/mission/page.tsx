@@ -1,31 +1,36 @@
-import type {NextPage} from "next/types";
-import {ArrowRightIcon} from "@heroicons/react/24/outline";
+import type { NextPage } from "next/types";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 const values = [
   {
     emoji: "⚡️",
     title: "Be Bold",
-    description: "We ship fast, take risks, and make decisions with conviction. Playing it safe is not in our DNA.",
+    description:
+      "We ship fast, take risks, and make decisions with conviction. Playing it safe is not in our DNA.",
   },
   {
     emoji: "🎨",
     title: "Creator First",
-    description: "Every feature, every design choice, every line of code is written for the people who build in public.",
+    description:
+      "Every feature, every design choice, every line of code is written for the people who build in public.",
   },
   {
     emoji: "🙋",
     title: "Take Ownership",
-    description: "We treat every problem as our own. No finger-pointing — just solutions and accountability.",
+    description:
+      "We treat every problem as our own. No finger-pointing — just solutions and accountability.",
   },
   {
     emoji: "📊",
     title: "Data-Driven",
-    description: "Intuition starts the conversation; data ends it. We test, measure, and iterate relentlessly.",
+    description:
+      "Intuition starts the conversation; data ends it. We test, measure, and iterate relentlessly.",
   },
   {
     emoji: "✨",
     title: "Spark Joy",
-    description: "We believe work tools can actually be delightful. If using Pagely doesn't make you smile, we haven't done our job.",
+    description:
+      "We believe work tools can actually be delightful. If using Pagely doesn't make you smile, we haven't done our job.",
   },
 ];
 
@@ -50,7 +55,10 @@ const MissionPage: NextPage = () => {
               </span>
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-purple-100">
-              The internet has made it possible for anyone to build an audience and turn their passion into a living. Pagely makes that transition simple, beautiful, and fast — so you can spend more time creating and less time wrangling tools.
+              The internet has made it possible for anyone to build an audience
+              and turn their passion into a living. Pagely makes that transition
+              simple, beautiful, and fast — so you can spend more time creating
+              and less time wrangling tools.
             </p>
           </div>
         </section>
@@ -69,7 +77,9 @@ const MissionPage: NextPage = () => {
                 </div>
                 <div className="text-center">
                   <p className="text-lg font-bold text-white">Evan</p>
-                  <p className="text-sm text-purple-300">Founder & CEO, Pagely</p>
+                  <p className="text-sm text-purple-300">
+                    Founder & CEO, Pagely
+                  </p>
                 </div>
               </div>
 
@@ -80,17 +90,23 @@ const MissionPage: NextPage = () => {
                 </h2>
                 <div className="mt-6 space-y-4 text-purple-100">
                   <p>
-                    "I started Pagely because I watched too many talented people get stuck — not because they lacked skill or drive, but because the tools were too complicated, too expensive, or just not built for them.
+                    "I started Pagely because I watched too many talented people
+                    get stuck — not because they lacked skill or drive, but
+                    because the tools were too complicated, too expensive, or
+                    just not built for them.
                   </p>
                   <p>
-                    I wanted to build something that genuinely felt like a superpower in your hands. Something that meets you where you are, whether you're posting your first link or managing a seven-figure business.
+                    I wanted to build something that genuinely felt like a
+                    superpower in your hands. Something that meets you where you
+                    are, whether you're posting your first link or managing a
+                    seven-figure business.
                   </p>
                   <p>
-                    If Pagely helps even one more person take the leap and work for themselves, then we've done exactly what we set out to do.
+                    If Pagely helps even one more person take the leap and work
+                    for themselves, then we've done exactly what we set out to
+                    do.
                   </p>
-                  <p className="font-semibold text-white">
-                    — Evan, Founder
-                  </p>
+                  <p className="font-semibold text-white">— Evan, Founder</p>
                 </div>
               </div>
             </div>
@@ -100,9 +116,12 @@ const MissionPage: NextPage = () => {
         {/* Our values */}
         <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Our values</h2>
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+              Our values
+            </h2>
             <p className="mx-auto mt-4 max-w-xl text-purple-100">
-              These aren't buzzwords on a wall — they're the standards we hold ourselves to every single day.
+              These aren't buzzwords on a wall — they're the standards we hold
+              ourselves to every single day.
             </p>
           </div>
 
@@ -113,8 +132,12 @@ const MissionPage: NextPage = () => {
                 className="group rounded-2xl border border-white/10 bg-white/5 p-7 transition hover:border-purple-400/30 hover:bg-white/8"
               >
                 <span className="text-3xl">{value.emoji}</span>
-                <h3 className="mt-4 text-lg font-bold text-white">{value.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-purple-100">{value.description}</p>
+                <h3 className="mt-4 text-lg font-bold text-white">
+                  {value.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-purple-100">
+                  {value.description}
+                </p>
               </div>
             ))}
           </div>
@@ -132,7 +155,8 @@ const MissionPage: NextPage = () => {
                 Ready to work for yourself?
               </h2>
               <p className="mx-auto mt-4 max-w-lg text-purple-100">
-                Join thousands of creators already using Pagely to build their brand, grow their audience, and earn on their own terms.
+                Join thousands of creators already using Pagely to build their
+                brand, grow their audience, and earn on their own terms.
               </p>
               <a
                 href="#"
@@ -141,7 +165,9 @@ const MissionPage: NextPage = () => {
                 Start your free trial
                 <ArrowRightIcon className="h-4 w-4" aria-hidden="true" />
               </a>
-              <p className="mt-3 text-xs text-purple-300">No credit card required · Cancel any time</p>
+              <p className="mt-3 text-xs text-purple-300">
+                No credit card required · Cancel any time
+              </p>
             </div>
           </div>
         </section>
@@ -151,4 +177,3 @@ const MissionPage: NextPage = () => {
 };
 
 export default MissionPage;
-

@@ -30,4 +30,3 @@ export const countryCodes: CountryCodeOption[] = [
   { flag: "🇲🇽", code: "+52" },
   { flag: "🇿🇦", code: "+27" },
 ];
-

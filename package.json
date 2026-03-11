@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier:fix": "prettier --write .",
+    "prettier": "prettier --check .",
+    "test:type": "tsc --noEmit --skipLibCheck"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.9",
@@ -23,6 +26,7 @@
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
+    "prettier": "3.8.1",
     "tailwindcss": "3.4.19",
     "typescript": "^5.9.3"
   }
