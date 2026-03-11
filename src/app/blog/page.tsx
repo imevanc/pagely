@@ -1,4 +1,4 @@
-import type {NextPage} from "next/types";
+import type { NextPage } from "next/types";
 
 const BlogPage: NextPage = () => {
   return (
@@ -14,4 +14,3 @@ const BlogPage: NextPage = () => {
 };
 
 export default BlogPage;
-

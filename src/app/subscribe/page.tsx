@@ -1,9 +1,9 @@
 "use client";
 
-import {useRouter} from "next/navigation";
-import type {NextPage} from "next/types";
-import {useForm} from "react-hook-form";
-import {ArrowRightIcon} from "@heroicons/react/24/outline";
+import { useRouter } from "next/navigation";
+import type { NextPage } from "next/types";
+import { useForm } from "react-hook-form";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 type SubscribeFormValues = {
   plan: "monthly" | "yearly";
@@ -15,8 +15,8 @@ const SubscribePage: NextPage = () => {
     register,
     handleSubmit,
     watch,
-    formState: {errors},
-  } = useForm<SubscribeFormValues>({mode: "onSubmit"});
+    formState: { errors },
+  } = useForm<SubscribeFormValues>({ mode: "onSubmit" });
 
   const selectedPlan = watch("plan");
 
@@ -27,16 +27,19 @@ const SubscribePage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-20 lg:px-8">
-
         {/* Stepper */}
         <div className="mb-10 flex items-center justify-center gap-3">
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">1</div>
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
+              1
+            </div>
             <span className="text-sm text-purple-300">Account</span>
           </div>
           <div className="h-px w-10 bg-white/20" />
           <div className="flex items-center gap-2">
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-bold text-white">2</div>
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-bold text-white">
+              2
+            </div>
             <span className="text-sm font-semibold text-white">Plan</span>
           </div>
         </div>
@@ -46,7 +49,8 @@ const SubscribePage: NextPage = () => {
           Pick your plan, start earning today 💸
         </h1>
         <p className="mt-3 text-center text-purple-200">
-          Save $100s by choosing Pagely! <br />All-In-One store, easy to set up.
+          Save $100s by choosing Pagely! <br />
+          All-In-One store, easy to set up.
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-10 space-y-4">
@@ -65,13 +69,18 @@ const SubscribePage: NextPage = () => {
                 id="monthly"
                 type="radio"
                 value="monthly"
-                {...register("plan", {required: "Please select a plan to continue"})}
+                {...register("plan", {
+                  required: "Please select a plan to continue",
+                })}
                 className="absolute right-4 top-4 h-4 w-4 accent-purple-500"
               />
               <p className="text-lg font-bold text-white">Monthly</p>
               <p className="mt-2 text-3xl font-extrabold text-white">£0</p>
               <p className="mt-1 text-sm text-purple-200">today for 14 days</p>
-              <p className="mt-3 text-sm text-purple-100">then <span className="font-semibold text-white">£25 / month</span></p>
+              <p className="mt-3 text-sm text-purple-100">
+                then{" "}
+                <span className="font-semibold text-white">£25 / month</span>
+              </p>
             </label>
 
             {/* Yearly */}
@@ -90,7 +99,9 @@ const SubscribePage: NextPage = () => {
                 id="yearly"
                 type="radio"
                 value="yearly"
-                {...register("plan", {required: "Please select a plan to continue"})}
+                {...register("plan", {
+                  required: "Please select a plan to continue",
+                })}
                 className="absolute right-4 top-4 h-4 w-4 accent-purple-500"
               />
               <p className="text-lg font-bold text-white">Yearly</p>
@@ -105,7 +116,9 @@ const SubscribePage: NextPage = () => {
           </div>
 
           {errors.plan && (
-            <p className="text-center text-xs text-red-400">{errors.plan.message}</p>
+            <p className="text-center text-xs text-red-400">
+              {errors.plan.message}
+            </p>
           )}
 
           {/* Due today */}
@@ -128,4 +141,3 @@ const SubscribePage: NextPage = () => {
 };
 
 export default SubscribePage;
-
