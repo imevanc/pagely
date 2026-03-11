@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import type { NextPage } from "next/types";
 import { useForm } from "react-hook-form";
@@ -117,7 +117,7 @@ const extraSocials = [
   },
 ];
 
-const SocialsPage: NextPage = () => {
+const SocialsContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const username = searchParams.get("username") || "username";
@@ -263,5 +263,15 @@ const SocialsPage: NextPage = () => {
     </div>
   );
 };
+
+const SocialsPage: NextPage = () => (
+  <Suspense
+    fallback={
+      <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900" />
+    }
+  >
+    <SocialsContent />
+  </Suspense>
+);
 
 export default SocialsPage;
