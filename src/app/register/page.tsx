@@ -46,26 +46,33 @@ const RegisterPage: NextPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-20 lg:px-8">
         {/* Stepper */}
-        <div className="mb-10 flex items-center justify-center gap-3">
+        <div className="mb-10 flex items-center justify-center gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-bold text-white">
               1
             </div>
             <span className="text-sm font-semibold text-white">Account</span>
           </div>
-          <div className="h-px w-10 bg-white/20" />
+          <div className="h-px w-8 bg-white/20" />
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
               2
             </div>
             <span className="text-sm text-purple-300">Socials</span>
           </div>
-          <div className="h-px w-10 bg-white/20" />
+          <div className="h-px w-8 bg-white/20" />
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
               3
             </div>
             <span className="text-sm text-purple-300">Plan</span>
+          </div>
+          <div className="h-px w-8 bg-white/20" />
+          <div className="flex items-center gap-2">
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
+              4
+            </div>
+            <span className="text-sm text-purple-300">Payment</span>
           </div>
         </div>
 
