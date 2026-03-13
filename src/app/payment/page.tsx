@@ -56,13 +56,29 @@ const CVVIcon = () => (
     className="opacity-70"
   >
     {/* Card body */}
-    <rect x="0.5" y="0.5" width="39" height="27" rx="3.5" fill="#334155" stroke="#64748b" />
+    <rect
+      x="0.5"
+      y="0.5"
+      width="39"
+      height="27"
+      rx="3.5"
+      fill="#334155"
+      stroke="#64748b"
+    />
     {/* Magnetic stripe */}
     <rect x="0" y="5" width="40" height="6" fill="#1e293b" />
     {/* Signature strip */}
     <rect x="4" y="16" width="24" height="6" rx="1" fill="#e2e8f0" />
     {/* CVV box highlight */}
-    <rect x="24" y="16" width="12" height="6" rx="1" fill="#fde68a" opacity="0.9" />
+    <rect
+      x="24"
+      y="16"
+      width="12"
+      height="6"
+      rx="1"
+      fill="#fde68a"
+      opacity="0.9"
+    />
     {/* CVV dots */}
     <circle cx="27" cy="19" r="1" fill="#1e293b" />
     <circle cx="30" cy="19" r="1" fill="#1e293b" />
@@ -143,9 +159,7 @@ const PaymentContent = () => {
             Your store runs free till{" "}
             <span className="text-purple-300">{trialEndDate}</span>
           </p>
-          <p className="mt-1 text-sm text-purple-200">
-            Cancel anytime 💝
-          </p>
+          <p className="mt-1 text-sm text-purple-200">Cancel anytime 💝</p>
         </div>
 
         {/* Heading */}
@@ -153,10 +167,7 @@ const PaymentContent = () => {
           Payment Method
         </h1>
 
-        <form
-          onSubmit={handleSubmit(onSubmit)}
-          className="mt-8 space-y-4"
-        >
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-4">
           {/* Google Pay */}
           <label
             htmlFor="google_pay"
@@ -203,7 +214,9 @@ const PaymentContent = () => {
             />
             <div className="flex items-center gap-3">
               <div className="flex h-10 w-16 items-center justify-center rounded-lg bg-[#00D66B]">
-                <span className="text-sm font-black tracking-tight text-white">Link</span>
+                <span className="text-sm font-black tracking-tight text-white">
+                  Link
+                </span>
               </div>
               <span className="font-medium text-white">Pay with Link</span>
             </div>
@@ -249,7 +262,10 @@ const PaymentContent = () => {
                       maxLength={19}
                       value={cardNumberDisplay}
                       {...register("cardNumber", {
-                        required: selectedMethod === "card" ? "Card number is required" : false,
+                        required:
+                          selectedMethod === "card"
+                            ? "Card number is required"
+                            : false,
                         validate: (v) =>
                           selectedMethod !== "card" ||
                           v.replace(/\s/g, "").length === 16 ||
@@ -275,7 +291,9 @@ const PaymentContent = () => {
                     </div>
                   </div>
                   {errors.cardNumber && (
-                    <p className="mt-1 text-xs text-red-400">{errors.cardNumber.message}</p>
+                    <p className="mt-1 text-xs text-red-400">
+                      {errors.cardNumber.message}
+                    </p>
                   )}
                 </div>
 
@@ -290,10 +308,14 @@ const PaymentContent = () => {
                         maxLength={5}
                         value={expiryDisplay}
                         {...register("expiryDate", {
-                          required: selectedMethod === "card" ? "Expiry date is required" : false,
+                          required:
+                            selectedMethod === "card"
+                              ? "Expiry date is required"
+                              : false,
                           validate: (v) => {
                             if (selectedMethod !== "card") return true;
-                            if (!/^\d{2}\/\d{2}$/.test(v)) return "Use MM/YY format";
+                            if (!/^\d{2}\/\d{2}$/.test(v))
+                              return "Use MM/YY format";
                             const [mm, yy] = v.split("/").map(Number);
                             if (mm < 1 || mm > 12) return "Invalid month";
                             const now = new Date();
@@ -311,7 +333,9 @@ const PaymentContent = () => {
                       />
                     </div>
                     {errors.expiryDate && (
-                      <p className="mt-1 text-xs text-red-400">{errors.expiryDate.message}</p>
+                      <p className="mt-1 text-xs text-red-400">
+                        {errors.expiryDate.message}
+                      </p>
                     )}
                   </div>
 
@@ -323,13 +347,18 @@ const PaymentContent = () => {
                         placeholder="Security Code"
                         maxLength={4}
                         {...register("securityCode", {
-                          required: selectedMethod === "card" ? "Security code is required" : false,
+                          required:
+                            selectedMethod === "card"
+                              ? "Security code is required"
+                              : false,
                           validate: (v) =>
                             selectedMethod !== "card" ||
                             /^\d{3,4}$/.test(v) ||
                             "Enter 3 or 4 digits",
                           onChange: (e) => {
-                            e.target.value = e.target.value.replace(/\D/g, "").slice(0, 4);
+                            e.target.value = e.target.value
+                              .replace(/\D/g, "")
+                              .slice(0, 4);
                           },
                         })}
                         className="h-full flex-1 bg-transparent pl-4 text-sm text-white placeholder:text-purple-300/60 focus:outline-none"
@@ -339,7 +368,9 @@ const PaymentContent = () => {
                       </div>
                     </div>
                     {errors.securityCode && (
-                      <p className="mt-1 text-xs text-red-400">{errors.securityCode.message}</p>
+                      <p className="mt-1 text-xs text-red-400">
+                        {errors.securityCode.message}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -359,7 +390,8 @@ const PaymentContent = () => {
               <input
                 type="checkbox"
                 {...register("agreeTerms", {
-                  required: "You must agree to the Terms of Service and Privacy Policy to continue",
+                  required:
+                    "You must agree to the Terms of Service and Privacy Policy to continue",
                 })}
                 className="mt-0.5 h-4 w-4 shrink-0 accent-purple-500"
               />
@@ -380,7 +412,9 @@ const PaymentContent = () => {
               </span>
             </label>
             {errors.agreeTerms && (
-              <p className="mt-2 text-xs text-red-400">{errors.agreeTerms.message}</p>
+              <p className="mt-2 text-xs text-red-400">
+                {errors.agreeTerms.message}
+              </p>
             )}
           </div>
 
@@ -415,10 +449,3 @@ const PaymentPage: NextPage = () => (
 );
 
 export default PaymentPage;
-
-
-
-
-
-
-
