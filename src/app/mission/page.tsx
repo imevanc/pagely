@@ -159,7 +159,7 @@ const MissionPage: NextPage = () => {
                 brand, grow their audience, and earn on their own terms.
               </p>
               <a
-                href="#"
+                href="/register"
                 className="mt-8 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-purple-900/40 transition hover:from-blue-400 hover:to-purple-500"
               >
                 Start your free trial
