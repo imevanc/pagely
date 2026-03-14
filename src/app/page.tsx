@@ -1,6 +1,7 @@
 "use client";
 
 import type { NextPage } from "next/types";
+import { useForm } from "react-hook-form";
 import {
   ArrowRightIcon,
   CheckCircleIcon,
@@ -43,6 +44,63 @@ const integrations = [
   { name: "PayPal", icon: SiPaypal, color: "text-blue-300" },
   { name: "Stripe", icon: SiStripe, color: "text-purple-400" },
 ];
+
+const NewsletterForm = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitSuccessful },
+    reset,
+  } = useForm<{ email: string }>({ mode: "onSubmit" });
+
+  const onSubmit = (_data: { email: string }) => {
+    reset();
+  };
+
+  return (
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="mx-auto mt-8 w-full max-w-md"
+      noValidate
+    >
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <div className="flex-1">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            {...register("email", {
+              required: "Please enter your email address",
+              pattern: {
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: "Please enter a valid email address",
+              },
+            })}
+            className={`h-12 w-full rounded-xl border bg-slate-900/60 px-4 text-sm text-white placeholder:text-purple-300/60 focus:outline-none ${
+              errors.email
+                ? "border-red-500 focus:border-red-400"
+                : "border-white/20 focus:border-purple-400"
+            }`}
+          />
+          {errors.email && (
+            <p className="mt-1.5 text-xs text-red-400">{errors.email.message}</p>
+          )}
+        </div>
+        <button
+          type="submit"
+          className="flex h-12 shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-6 text-sm font-semibold text-white transition hover:from-blue-400 hover:to-purple-500"
+        >
+          Subscribe
+          <ArrowRightIcon className="h-4 w-4" />
+        </button>
+      </div>
+      {isSubmitSuccessful && (
+        <p className="mt-3 text-center text-sm font-semibold text-green-400">
+          🎉 You&apos;re subscribed! Welcome to the community.
+        </p>
+      )}
+    </form>
+  );
+};
 
 const Home: NextPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
@@ -154,6 +212,25 @@ const Home: NextPage = () => (
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+        <div className="rounded-2xl border border-purple-400/20 bg-white/5 px-8 py-12 text-center">
+          <p className="inline-flex rounded-full border border-purple-300/30 bg-white/5 px-4 py-1 text-sm text-purple-100">
+            Stay in the loop
+          </p>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
+            Creator tips, straight to your inbox 📬
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-purple-100">
+            Get weekly strategies on growing your audience, monetising your content, and making the most of Pagely — no spam, ever.
+          </p>
+          <NewsletterForm />
+          <p className="mt-4 text-xs text-purple-300">
+            Join 10,000+ creators already subscribed. Unsubscribe anytime.
+          </p>
         </div>
       </section>
 
