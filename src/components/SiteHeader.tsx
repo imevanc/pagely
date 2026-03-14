@@ -35,6 +35,12 @@ export const SiteHeader = () => {
             </a>
           ))}
           <a
+            href="/login"
+            className="rounded-lg border border-white/20 px-4 py-2 text-sm font-semibold text-purple-100 transition hover:border-white/40 hover:text-white"
+          >
+            Log In
+          </a>
+          <a
             href="/register"
             className="rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 px-4 py-2 text-sm font-semibold text-white transition hover:from-blue-400 hover:to-purple-500"
           >
@@ -78,6 +84,13 @@ export const SiteHeader = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href="/login"
+              onClick={() => setOpen(false)}
+              className="mt-2 block rounded-lg border border-white/20 px-3 py-2 text-center text-base font-semibold text-purple-100 hover:bg-white/10"
+            >
+              Log In
+            </a>
             <a
               href="/register"
               onClick={() => setOpen(false)}
