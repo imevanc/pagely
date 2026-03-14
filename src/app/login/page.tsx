@@ -4,7 +4,12 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import type { NextPage } from "next/types";
 import { useForm } from "react-hook-form";
-import { EyeIcon, EyeSlashIcon, LockClosedIcon, UserIcon } from "@heroicons/react/24/outline";
+import {
+  EyeIcon,
+  EyeSlashIcon,
+  LockClosedIcon,
+  UserIcon,
+} from "@heroicons/react/24/outline";
 import { PagelyLogo } from "@/components/PagelyLogo";
 
 type LoginFormValues = {
@@ -43,7 +48,11 @@ const LoginPage: NextPage = () => {
 
       {/* Card */}
       <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-8">
-        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="space-y-5"
+          noValidate
+        >
           {/* Username */}
           <div>
             <div
@@ -61,13 +70,18 @@ const LoginPage: NextPage = () => {
                 autoComplete="username"
                 {...register("username", {
                   required: "Username is required",
-                  minLength: { value: 2, message: "Username must be at least 2 characters" },
+                  minLength: {
+                    value: 2,
+                    message: "Username must be at least 2 characters",
+                  },
                 })}
                 className="h-full flex-1 bg-transparent px-4 text-sm text-white placeholder:text-purple-300/60 focus:outline-none"
               />
             </div>
             {errors.username && (
-              <p className="mt-1.5 text-xs text-red-400">{errors.username.message}</p>
+              <p className="mt-1.5 text-xs text-red-400">
+                {errors.username.message}
+              </p>
             )}
           </div>
 
@@ -88,7 +102,10 @@ const LoginPage: NextPage = () => {
                 autoComplete="current-password"
                 {...register("password", {
                   required: "Password is required",
-                  minLength: { value: 8, message: "Password must be at least 8 characters" },
+                  minLength: {
+                    value: 8,
+                    message: "Password must be at least 8 characters",
+                  },
                 })}
                 className="h-full flex-1 bg-transparent px-4 text-sm text-white placeholder:text-purple-300/60 focus:outline-none"
               />
@@ -106,7 +123,9 @@ const LoginPage: NextPage = () => {
               </button>
             </div>
             {errors.password && (
-              <p className="mt-1.5 text-xs text-red-400">{errors.password.message}</p>
+              <p className="mt-1.5 text-xs text-red-400">
+                {errors.password.message}
+              </p>
             )}
           </div>
 
@@ -145,4 +164,3 @@ const LoginPage: NextPage = () => {
 };
 
 export default LoginPage;
-
