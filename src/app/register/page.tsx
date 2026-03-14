@@ -337,7 +337,13 @@ const RegisterPage: NextPage = () => {
           Your data is protected under GDPR.
         </p>
         <p className="mt-2 text-center text-base font-semibold text-white">
-          Have an account? Login
+          Have an account?{" "}
+          <a
+            href="/login"
+            className="underline underline-offset-2 transition hover:text-purple-200"
+          >
+            Login
+          </a>
         </p>
       </main>
     </div>
