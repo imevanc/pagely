@@ -79,9 +79,7 @@ export const CookieBanner = () => {
         <div className="w-full max-w-sm rounded-2xl border border-white/10 bg-blue-950/95 p-7 shadow-2xl shadow-black/60 backdrop-blur">
           <div className="mb-5 flex items-center gap-2">
             <span className="text-2xl">🍪</span>
-            <h2 className="text-base font-bold text-white">
-              We use cookies
-            </h2>
+            <h2 className="text-base font-bold text-white">We use cookies</h2>
           </div>
           <CookieText />
           <div className="mt-6 flex flex-col gap-3">
@@ -101,11 +99,17 @@ const CookieText = () => (
   <p className="max-w-2xl text-sm leading-relaxed text-purple-100">
     🍪 Cookies help us improve performance and make your experience more
     personal. Use of this site means you agree to our{" "}
-    <a href="#" className="font-semibold text-white underline underline-offset-2 hover:text-purple-200">
+    <a
+      href="#"
+      className="font-semibold text-white underline underline-offset-2 hover:text-purple-200"
+    >
       Terms
     </a>{" "}
     and{" "}
-    <a href="#" className="font-semibold text-white underline underline-offset-2 hover:text-purple-200">
+    <a
+      href="#"
+      className="font-semibold text-white underline underline-offset-2 hover:text-purple-200"
+    >
       Privacy Policy
     </a>
     .
@@ -136,4 +140,3 @@ const CookieButtons = ({
     </button>
   </div>
 );
-
