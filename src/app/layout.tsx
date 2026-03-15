@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import "./globals.css";
-import { SiteHeader, SiteFooter } from "@/components";
+import { SiteHeader, SiteFooter, CookieBanner } from "@/components";
 
 export const metadata: Metadata = {
   title: "Pagely - Your Links, Beautifully Organized",
@@ -17,7 +17,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <SiteHeader />
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <CookieBanner />
+      </body>
       <SiteFooter />
     </html>
   );
