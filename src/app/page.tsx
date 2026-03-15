@@ -82,7 +82,9 @@ const NewsletterForm = () => {
             }`}
           />
           {errors.email && (
-            <p className="mt-1.5 text-xs text-red-400">{errors.email.message}</p>
+            <p className="mt-1.5 text-xs text-red-400">
+              {errors.email.message}
+            </p>
           )}
         </div>
         <button
@@ -225,7 +227,8 @@ const Home: NextPage = () => (
             Creator tips, straight to your inbox 📬
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-purple-100">
-            Get weekly strategies on growing your audience, monetising your content, and making the most of Pagely — no spam, ever.
+            Get weekly strategies on growing your audience, monetising your
+            content, and making the most of Pagely — no spam, ever.
           </p>
           <NewsletterForm />
           <p className="mt-4 text-xs text-purple-300">
