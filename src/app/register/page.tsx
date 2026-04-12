@@ -45,7 +45,6 @@ const RegisterPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-20 lg:px-8">
-        {/* Stepper */}
         <div className="mb-10 flex items-center justify-center gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-xs font-bold text-white">
@@ -86,7 +85,6 @@ const RegisterPage: NextPage = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="mt-10 space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6"
         >
-          {/* Username */}
           <div>
             <label
               htmlFor="username"
@@ -127,7 +125,6 @@ const RegisterPage: NextPage = () => {
             )}
           </div>
 
-          {/* Full Name */}
           <div>
             <label
               htmlFor="fullName"
@@ -156,7 +153,6 @@ const RegisterPage: NextPage = () => {
             )}
           </div>
 
-          {/* Email */}
           <div>
             <label
               htmlFor="email"
@@ -185,7 +181,6 @@ const RegisterPage: NextPage = () => {
             )}
           </div>
 
-          {/* Phone */}
           <div>
             <label
               htmlFor="phoneNumber"
@@ -194,7 +189,6 @@ const RegisterPage: NextPage = () => {
               Phone Number
             </label>
             <div className="flex gap-3">
-              {/* Custom country code dropdown */}
               <div className="relative w-36" ref={dropdownRef}>
                 <input type="hidden" name="countryCode" value={countryCode} />
                 <button
@@ -274,7 +268,6 @@ const RegisterPage: NextPage = () => {
             </div>
           </div>
 
-          {/* Password */}
           <div>
             <label
               htmlFor="password"

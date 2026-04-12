@@ -38,9 +38,7 @@ const MissionPage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main>
-        {/* Mission quote */}
         <section className="relative overflow-hidden px-6 py-24 text-center lg:px-8 lg:py-32">
-          {/* background glow */}
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
             <div className="h-[500px] w-[500px] rounded-full bg-purple-600/20 blur-3xl" />
           </div>
@@ -62,14 +60,10 @@ const MissionPage: NextPage = () => {
             </p>
           </div>
         </section>
-
-        {/* Founder message */}
         <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
           <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
             <div className="grid gap-0 lg:grid-cols-2">
-              {/* Photo side */}
               <div className="flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-blue-500/20 to-purple-600/20 p-10">
-                {/* Avatar / photo placeholder */}
                 <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-white/20 bg-gradient-to-br from-blue-500 to-purple-600 shadow-xl shadow-purple-950/60">
                   <div className="flex h-full w-full items-center justify-center">
                     <span className="text-5xl font-bold text-white/90">E</span>
@@ -82,8 +76,6 @@ const MissionPage: NextPage = () => {
                   </p>
                 </div>
               </div>
-
-              {/* Message side */}
               <div className="flex flex-col justify-center p-10 lg:p-12">
                 <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
                   A message from our founder
@@ -112,8 +104,6 @@ const MissionPage: NextPage = () => {
             </div>
           </div>
         </section>
-
-        {/* Our values */}
         <section className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -142,11 +132,8 @@ const MissionPage: NextPage = () => {
             ))}
           </div>
         </section>
-
-        {/* CTA */}
         <section className="mx-auto max-w-7xl px-6 py-20 text-center lg:px-8">
           <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 px-8 py-16">
-            {/* glow */}
             <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
               <div className="h-[300px] w-[600px] rounded-full bg-blue-600/20 blur-3xl" />
             </div>

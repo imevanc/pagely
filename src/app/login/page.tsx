@@ -34,33 +34,28 @@ const LoginPage: NextPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white flex flex-col items-center justify-center px-6 py-16">
-      {/* Logo */}
       <a href="/" aria-label="Pagely home" className="mb-8">
         <PagelyLogo />
       </a>
 
-      {/* Heading */}
       <div className="mb-8 text-center">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
           Get your bag 💰🤑
         </h1>
       </div>
 
-      {/* Card */}
       <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 p-8">
         <form
           onSubmit={handleSubmit(onSubmit)}
           className="space-y-5"
           noValidate
         >
-          {/* Username */}
           <div>
             <div
               className={`flex h-12 overflow-hidden rounded-xl border bg-slate-900/60 transition focus-within:border-purple-400 ${
                 errors.username ? "border-red-500" : "border-white/20"
               }`}
             >
-              {/* Icon slab — 1/6 width */}
               <div className="flex w-1/6 shrink-0 items-center justify-center border-r border-white/10">
                 <UserIcon className="h-5 w-5 text-purple-300" />
               </div>
@@ -85,14 +80,12 @@ const LoginPage: NextPage = () => {
             )}
           </div>
 
-          {/* Password */}
           <div>
             <div
               className={`flex h-12 overflow-hidden rounded-xl border bg-slate-900/60 transition focus-within:border-purple-400 ${
                 errors.password ? "border-red-500" : "border-white/20"
               }`}
             >
-              {/* Icon slab — 1/6 width */}
               <div className="flex w-1/6 shrink-0 items-center justify-center border-r border-white/10">
                 <LockClosedIcon className="h-5 w-5 text-purple-300" />
               </div>
@@ -129,7 +122,6 @@ const LoginPage: NextPage = () => {
             )}
           </div>
 
-          {/* Forgot password */}
           <div className="text-right">
             <a
               href="#"
@@ -139,7 +131,6 @@ const LoginPage: NextPage = () => {
             </a>
           </div>
 
-          {/* Submit */}
           <button
             type="submit"
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-3 text-sm font-semibold text-white transition hover:from-blue-400 hover:to-purple-500"
@@ -148,7 +139,6 @@ const LoginPage: NextPage = () => {
           </button>
         </form>
 
-        {/* Sign up */}
         <p className="mt-6 text-center text-sm text-purple-200">
           Don&apos;t have an account?{" "}
           <a

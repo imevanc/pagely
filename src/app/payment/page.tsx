@@ -21,7 +21,6 @@ type PaymentFormValues = {
   agreeTerms: boolean;
 };
 
-// Calculate trial end date (today + 14 days)
 function getTrialEndDate() {
   const date = new Date();
   date.setDate(date.getDate() + 14);
@@ -55,7 +54,6 @@ const CVVIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     className="opacity-70"
   >
-    {/* Card body */}
     <rect
       x="0.5"
       y="0.5"
@@ -65,11 +63,8 @@ const CVVIcon = () => (
       fill="#334155"
       stroke="#64748b"
     />
-    {/* Magnetic stripe */}
     <rect x="0" y="5" width="40" height="6" fill="#1e293b" />
-    {/* Signature strip */}
     <rect x="4" y="16" width="24" height="6" rx="1" fill="#e2e8f0" />
-    {/* CVV box highlight */}
     <rect
       x="24"
       y="16"
@@ -79,7 +74,6 @@ const CVVIcon = () => (
       fill="#fde68a"
       opacity="0.9"
     />
-    {/* CVV dots */}
     <circle cx="27" cy="19" r="1" fill="#1e293b" />
     <circle cx="30" cy="19" r="1" fill="#1e293b" />
     <circle cx="33" cy="19" r="1" fill="#1e293b" />
@@ -89,7 +83,7 @@ const CVVIcon = () => (
 const PaymentContent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
-  void searchParams; // available for future use (e.g. passing plan)
+  void searchParams;
   const trialEndDate = getTrialEndDate();
 
   const {
@@ -115,14 +109,12 @@ const PaymentContent = () => {
 
   const onSubmit = (data: PaymentFormValues) => {
     console.log("Payment submitted", data);
-    // Navigate to success or dashboard
     router.push("/");
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-16 lg:px-8">
-        {/* Stepper */}
         <div className="mb-10 flex items-center justify-center gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
@@ -153,7 +145,6 @@ const PaymentContent = () => {
           </div>
         </div>
 
-        {/* Trial banner */}
         <div className="mb-8 rounded-2xl border border-purple-400/30 bg-white/5 px-6 py-4 text-center">
           <p className="text-base font-semibold text-white">
             Your store runs free till{" "}
@@ -162,13 +153,11 @@ const PaymentContent = () => {
           <p className="mt-1 text-sm text-purple-200">Cancel anytime 💝</p>
         </div>
 
-        {/* Heading */}
         <h1 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Payment Method
         </h1>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-8 space-y-4">
-          {/* Google Pay */}
           <label
             htmlFor="google_pay"
             className={`flex cursor-pointer items-center gap-4 rounded-2xl border p-5 transition-all duration-200 ${
@@ -194,7 +183,6 @@ const PaymentContent = () => {
             </div>
           </label>
 
-          {/* Pay with Link (Stripe) */}
           <label
             htmlFor="pay_with_link"
             className={`flex cursor-pointer items-center gap-4 rounded-2xl border p-5 transition-all duration-200 ${
@@ -222,7 +210,6 @@ const PaymentContent = () => {
             </div>
           </label>
 
-          {/* Card */}
           <label
             htmlFor="card"
             className={`flex cursor-pointer flex-col rounded-2xl border transition-all duration-200 ${
@@ -249,10 +236,8 @@ const PaymentContent = () => {
               </div>
             </div>
 
-            {/* Card fields — only shown when selected */}
             {selectedMethod === "card" && (
               <div className="space-y-3 px-5 pb-5">
-                {/* Card Number */}
                 <div>
                   <div className="flex h-12 overflow-hidden rounded-lg border border-white/20 bg-slate-900/60 focus-within:border-purple-400">
                     <input
@@ -297,7 +282,6 @@ const PaymentContent = () => {
                   )}
                 </div>
 
-                {/* Expiry + Security Code */}
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <div className="flex h-12 overflow-hidden rounded-lg border border-white/20 bg-slate-900/60 focus-within:border-purple-400">
@@ -384,7 +368,6 @@ const PaymentContent = () => {
             </p>
           )}
 
-          {/* Terms checkbox */}
           <div className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <label className="flex cursor-pointer items-start gap-3">
               <input
@@ -418,13 +401,11 @@ const PaymentContent = () => {
             )}
           </div>
 
-          {/* Security note */}
           <div className="flex items-center justify-center gap-2 text-xs text-purple-300">
             <ShieldCheckIcon className="h-4 w-4 text-purple-400" />
             <span>256-bit SSL encryption · Secured by Stripe</span>
           </div>
 
-          {/* CTA */}
           <button
             type="submit"
             className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-5 py-4 text-base font-bold text-white transition hover:from-blue-400 hover:to-purple-500"

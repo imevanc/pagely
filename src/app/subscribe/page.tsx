@@ -27,7 +27,6 @@ const SubscribePage: NextPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-20 lg:px-8">
-        {/* Stepper */}
         <div className="mb-10 flex items-center justify-center gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
@@ -58,7 +57,6 @@ const SubscribePage: NextPage = () => {
           </div>
         </div>
 
-        {/* Heading */}
         <h1 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Pick your plan, start earning today 💸
         </h1>
@@ -68,9 +66,7 @@ const SubscribePage: NextPage = () => {
         </p>
 
         <form onSubmit={handleSubmit(onSubmit)} className="mt-10 space-y-4">
-          {/* Plan cards */}
           <div className="grid gap-4 sm:grid-cols-2">
-            {/* Monthly */}
             <label
               htmlFor="monthly"
               className={`group relative flex cursor-pointer flex-col rounded-2xl border p-6 transition-all duration-200 hover:scale-105 hover:shadow-2xl hover:shadow-purple-900/50 ${
@@ -97,7 +93,6 @@ const SubscribePage: NextPage = () => {
               </p>
             </label>
 
-            {/* Yearly */}
             <label
               htmlFor="yearly"
               className={`group relative flex cursor-pointer flex-col rounded-2xl border p-6 transition-all duration-200 hover:scale-105 hover:shadow-2xl hover:shadow-purple-900/50 ${
@@ -135,7 +130,6 @@ const SubscribePage: NextPage = () => {
             </p>
           )}
 
-          {/* Due today */}
           <div className="px-1 py-2 text-center">
             <p className="text-sm text-purple-200">Due today</p>
             <p className="mt-1 text-2xl font-bold text-white">£0</p>
