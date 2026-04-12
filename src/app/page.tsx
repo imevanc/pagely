@@ -107,7 +107,6 @@ const NewsletterForm = () => {
 const Home: NextPage = () => (
   <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
     <main>
-      {/* Hero */}
       <section className="mx-auto max-w-7xl px-6 py-14 text-center lg:px-8 lg:py-20">
         <p className="inline-flex rounded-full border border-purple-300/30 bg-white/5 px-4 py-1 text-sm text-purple-100">
           Built for creators who want to own their audience
@@ -130,7 +129,6 @@ const Home: NextPage = () => (
         </a>
       </section>
 
-      {/* Best creators + iPhone mockup */}
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-12 lg:grid-cols-2 lg:items-center lg:px-8">
         <div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -153,25 +151,18 @@ const Home: NextPage = () => (
           </ul>
         </div>
 
-        {/* iPhone */}
         <div className="flex justify-center">
           <div className="relative w-[260px]">
-            {/* phone shell */}
             <div className="relative rounded-[3rem] border-[6px] border-slate-700 bg-slate-900 shadow-2xl shadow-purple-950/60">
-              {/* side buttons */}
               <div className="absolute -left-[10px] top-24 h-8 w-[4px] rounded-full bg-slate-600" />
               <div className="absolute -left-[10px] top-36 h-12 w-[4px] rounded-full bg-slate-600" />
               <div className="absolute -left-[10px] top-52 h-12 w-[4px] rounded-full bg-slate-600" />
               <div className="absolute -right-[10px] top-36 h-14 w-[4px] rounded-full bg-slate-600" />
 
-              {/* screen */}
               <div className="overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-blue-950 to-purple-950">
-                {/* notch */}
                 <div className="mx-auto mt-2 h-5 w-24 rounded-full bg-slate-900" />
 
-                {/* screen content */}
                 <div className="px-4 pb-6 pt-3">
-                  {/* avatar */}
                   <div className="flex flex-col items-center">
                     <div className="h-14 w-14 rounded-full border-2 border-purple-400/50 bg-gradient-to-br from-blue-500 to-purple-500" />
                     <p className="mt-2 text-xs font-semibold text-white">
@@ -182,7 +173,6 @@ const Home: NextPage = () => (
                     </p>
                   </div>
 
-                  {/* links */}
                   <div className="mt-4 space-y-2">
                     {[
                       "Join my newsletter",
@@ -200,7 +190,6 @@ const Home: NextPage = () => (
                     ))}
                   </div>
 
-                  {/* social row */}
                   <div className="mt-4 flex justify-center gap-3 text-purple-300">
                     <FaInstagram className="h-4 w-4" />
                     <FaTiktok className="h-4 w-4" />
@@ -208,7 +197,6 @@ const Home: NextPage = () => (
                     <FaLinkedin className="h-4 w-4" />
                   </div>
 
-                  {/* home indicator */}
                   <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-white/20" />
                 </div>
               </div>
@@ -217,7 +205,6 @@ const Home: NextPage = () => (
         </div>
       </section>
 
-      {/* Newsletter */}
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="rounded-2xl border border-purple-400/20 bg-white/5 px-8 py-12 text-center">
           <p className="inline-flex rounded-full border border-purple-300/30 bg-white/5 px-4 py-1 text-sm text-purple-100">
@@ -237,7 +224,6 @@ const Home: NextPage = () => (
         </div>
       </section>
 
-      {/* Testimonials + stats */}
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           See what people are saying
@@ -283,7 +269,6 @@ const Home: NextPage = () => (
         </div>
       </section>
 
-      {/* Features */}
       <section className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Built to sell, built to scale

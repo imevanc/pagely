@@ -157,7 +157,6 @@ const SocialsContent = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-900 to-purple-900 text-white">
       <main className="mx-auto flex w-full max-w-2xl flex-col px-6 py-20 lg:px-8">
-        {/* Stepper */}
         <div className="mb-10 flex items-center justify-center gap-2 flex-wrap">
           <div className="flex items-center gap-2">
             <div className="flex h-7 w-7 items-center justify-center rounded-full bg-purple-400/40 text-xs font-bold text-purple-200">
@@ -188,14 +187,12 @@ const SocialsContent = () => {
           </div>
         </div>
 
-        {/* Heading */}
         <h1 className="text-center text-3xl font-bold tracking-tight sm:text-4xl">
           Connect your social accounts
           <br />
           to your store
         </h1>
 
-        {/* Store URL preview */}
         <div className="mt-6 flex flex-col items-center gap-1">
           <p className="text-lg font-bold text-purple-200">
             <span className="text-2xl font-extrabold text-white">@</span>
@@ -220,7 +217,6 @@ const SocialsContent = () => {
                   {label}
                 </label>
                 <div className="flex h-11 overflow-hidden rounded-lg border border-white/20 focus-within:border-purple-400">
-                  {/* Icon box — 1/5 width */}
                   <div
                     className={`flex w-1/5 min-w-[3.5rem] shrink-0 items-center justify-center gap-2 ${bg} border-r border-white/20`}
                   >
@@ -229,7 +225,6 @@ const SocialsContent = () => {
                       @
                     </span>
                   </div>
-                  {/* Input — 4/5 width */}
                   <input
                     type="text"
                     placeholder={placeholder}

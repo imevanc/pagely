@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const COOKIE_KEY = "pagely_cookie_consent";
-const COOKIE_TTL_MS = 5 * 60 * 60 * 1000; // 5 hours
+const COOKIE_TTL_MS = 5 * 60 * 60 * 1000;
 
 function getConsent(): string | null {
   if (typeof document === "undefined") return null;
@@ -39,13 +39,11 @@ export const CookieBanner = () => {
 
   return (
     <>
-      {/* ── Backdrop ── blocks ALL interaction on tablet + mobile */}
       <div
         aria-hidden="true"
         className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
       />
 
-      {/* ── Desktop banner (bottom bar) ── */}
       <div
         role="dialog"
         aria-modal="true"
@@ -64,7 +62,6 @@ export const CookieBanner = () => {
         <CookieButtons onAccept={handleAccept} onReject={handleReject} />
       </div>
 
-      {/* ── Tablet / Mobile modal (centre screen) ── */}
       <div
         role="dialog"
         aria-modal="true"
